@@ -15,6 +15,25 @@ export class APIService {
 
   constructor(private http: HttpClient) { }
 
+
+  deleteProduct (id: string, rev: string) {
+    const deleteUrl = `${this.baseUrl}/${this.databaseName1}/${id}?rev=${rev}`
+    return this.http.delete(deleteUrl, {
+      headers: {
+        'Authorization': 'Basic ' + btoa(this.couchUserName + ':' + this.couchPassword)
+      }
+    });
+  }
+
+  updateProduct(id: string, updateDocument: any) {
+    const updateUrl = `${this.baseUrl}/${this.databaseName1}/${id}`;
+    return this.http.put(updateUrl, updateDocument, {
+      headers: {
+        'Authorization': 'Basic ' + btoa(this.couchUserName + ':' + this.couchPassword)
+      }
+    });
+  }
+
   createProduct(document: any): Observable<any> {
     const createUrl = `${this.baseUrl}/${this.databaseName1}`;
     return this.http.post(createUrl, document, {

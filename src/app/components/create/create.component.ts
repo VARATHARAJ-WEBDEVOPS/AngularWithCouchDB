@@ -48,6 +48,12 @@ export class CreateComponent implements OnInit {
       this.API.createProduct(this.productModel).subscribe((res) => {
         console.log(res);
         this.resetForm();
+          Swal.fire({
+            title: 'Yep!',
+            text: 'Item Created',
+            icon: 'success',
+            confirmButtonText: 'Okey!'
+          });
       });
     }
   }

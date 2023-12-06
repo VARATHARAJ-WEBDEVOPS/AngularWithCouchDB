@@ -50,10 +50,10 @@
     align-items: center;
     font-size: 2vw;
     color: rgba(0, 0, 0, 0.589);
-   
+
 }
 
-.bsSearchbar input{
+.bsSearchbar input {
     border: none;
     width: 80%;
     height: 100%;
@@ -159,9 +159,9 @@
     }
 
 
-.bsSearchbar {
-    display: none;
-}
+    .bsSearchbar {
+        display: none;
+    }
 
     .dashboardContainer #serachIcon {
         top: 2vh;
@@ -172,7 +172,7 @@
         display: flex;
     }
 
-    .dashboardContainer  .title {
+    .dashboardContainer .title {
         font-size: 3vh;
         top: 2vh;
         left: 2vh;
@@ -183,7 +183,7 @@
         height: 100svh;
         display: flex;
         flex-direction: column;
-    } 
+    }
 
     .dashboardContainer {
         width: 100%;
@@ -193,6 +193,6 @@
 
     .nav {
         order: 2;
-    min-height: 10%;
+        min-height: 10%;
     }
 }

@@ -9,7 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateComponent } from './components/create/create.component';
 import { ReadComponent } from './components/read/read.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
 import { AdminNavbarComponent } from './components/admin-navbar/admin-navbar.component';
@@ -30,7 +30,8 @@ import { AdminNavbarComponent } from './components/admin-navbar/admin-navbar.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
